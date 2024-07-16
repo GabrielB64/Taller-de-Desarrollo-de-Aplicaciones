@@ -1,5 +1,5 @@
 body {
-    background: #01200F;
+    background: #1e422e;
 }
 
 #cardLogin{
@@ -9,4 +9,8 @@ body {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+#navBar{
+    width: 100%;
 }
