@@ -6,6 +6,8 @@ function authUser(){
     }
 }
 
+
+    
 document.addEventListener('DOMContentLoaded', (event) => {
     const data = [
         {Nombre: 'Gabriel', Apellido: 'Bustamante'}
@@ -13,6 +15,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function popularTabla (data) {
         const tableBody = document.getElementById('cuerpoTablaAdmin');
+        if (!tableBody) {
+            console.error('No se encontró el elemento con el ID "cuerpoTablaAdmin".');
+            return;
+        }
         data.forEach(item => {
             const row = document.createElement('tr');
 
@@ -36,6 +42,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     popularTabla(data);
-
-
 })
