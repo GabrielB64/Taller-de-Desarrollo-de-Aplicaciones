@@ -9,16 +9,15 @@ function authUser(){
 
     
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    //TODO Interacción con .JSON
     const data = [
         {Nombre: 'Gabriel', Apellido: 'Bustamante'}
     ];
 
+    // Creación de tabla con nombre, apellido y botón
     function popularTabla (data) {
         const tableBody = document.getElementById('cuerpoTablaAdmin');
-        if (!tableBody) {
-            console.error('No se encontró el elemento con el ID "cuerpoTablaAdmin".');
-            return;
-        }
         data.forEach(item => {
             const row = document.createElement('tr');
 
@@ -34,6 +33,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const button = document.createElement('button');
             button.textContent = 'Editar';
             button.className  = 'btn btn-primary';
+            button.addEventListener('click', () => {
+                //TODO Codigo para editar entrada
+            });
             celdaBoton.appendChild(button);
             row.appendChild(celdaBoton);
 
